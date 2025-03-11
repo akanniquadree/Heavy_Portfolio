@@ -34,7 +34,6 @@ function HideOnScroll(props) {
   );
 }
 
-
 const drawerWidth = 260;
 
 export default function Navbar(props) {
@@ -54,7 +53,7 @@ export default function Navbar(props) {
           }
         });
       },
-      { threshold: 0.6 } // Adjust threshold for better accuracy
+      { threshold: 0.3 } // Adjusted for better accuracy
     );
 
     // Observe each section
@@ -75,6 +74,7 @@ export default function Navbar(props) {
   const handleClick = (item) => {
     if (sectionRefs[item]?.current) {
       sectionRefs[item].current.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(item); // Set active section immediately
     }
   };
 
@@ -102,8 +102,21 @@ export default function Navbar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        <a to="#">
-          <span style={{ fontWeight: 700 }}>Quadree</span>
+        <a
+          to="#"
+          style={{ display: "flex", gap: "10px", alignItems: "center" }}
+        >
+          <img
+            src="/Images/intro-bg.jpg"
+            alt=""
+            style={{
+              objectFit: "cover",
+              borderRadius: "50%",
+              height: "50px",
+              width: "50px",
+            }}
+          />
+          <span style={{ fontWeight: 700 }}>Habeeb</span>
         </a>
       </Typography>
       <Divider />
@@ -115,18 +128,21 @@ export default function Navbar(props) {
         }}
       >
         {Object.keys(sectionRefs).map((item, index) => (
-          <a
-            href=""
+          <ListItemButton
             key={index}
-            style={{ width: "100%" }}
-            onClick={() => {handleClick(item)}}
+            onClick={() => handleClick(item)}
+            sx={{ width: "100%" }}
           >
-            <ListItem disablePadding>
-              <ListItemButton sx={{}}>
-                <ListItemText primary={item.charAt(0).toUpperCase() + item.slice(1)} sx={{}} />
-              </ListItemButton>
-            </ListItem>
-          </a>
+            <ListItemText
+              primary={
+                <Typography
+                  sx={{ color: activeSection === item ? "#ff014f" : "inherit" }}
+                >
+                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                </Typography>
+              }
+            />
+          </ListItemButton>
         ))}
         {/* <ListItem disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
@@ -155,8 +171,20 @@ export default function Navbar(props) {
         >
           <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography variant="h6" component="div">
-              <a to="#" style={{display:'flex', gap:'10px', alignItems:'center'}}>
-                <img src="/Images/intro-bg.jpg" alt="" style={{objectFit:'cover', borderRadius:'50%',height:"50px",width:"50px"}}/>
+              <a
+                to="#"
+                style={{ display: "flex", gap: "10px", alignItems: "center" }}
+              >
+                <img
+                  src="/Images/intro-bg.jpg"
+                  alt=""
+                  style={{
+                    objectFit: "cover",
+                    borderRadius: "50%",
+                    height: "50px",
+                    width: "50px",
+                  }}
+                />
                 <span style={{ fontWeight: 700 }}>Habeeb</span>
               </a>
             </Typography>
@@ -165,7 +193,7 @@ export default function Navbar(props) {
                 <Button
                   key={index}
                   sx={{
-                    color: activeSection === item ? "#ff014f":"inherit",
+                    color: activeSection === item ? "#ff014f" : "inherit",
                     "&:hover": {
                       color: "#ff014f", // Change background color on hover
                       boxShadow: " #ff014f", // Add shadow effect on hover
@@ -174,7 +202,10 @@ export default function Navbar(props) {
                     },
                   }}
                   className="butHover butActive"
-                  onClick={() => {handleClick(item); console.log(activeSection, item)}}
+                  onClick={() => {
+                    handleClick(item);
+                    console.log(activeSection, item);
+                  }}
                 >
                   {item.charAt(0).toUpperCase() + item.slice(1)}
                 </Button>

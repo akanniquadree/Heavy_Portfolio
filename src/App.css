@@ -1,7 +1,8 @@
 *{
     margin: 0;
     padding: 0; 
-    color: black;
+    color: white;
+    /* background: linear-gradient(to bottom, #0a4d3c, #7b5a44) */
     /* background-color: white; */
 }
 h1,h2,h3,h4,h5,h6{

@@ -116,7 +116,7 @@ export default function Navbar(props) {
               width: "50px",
             }}
           />
-          <span style={{ fontWeight: 700 }}>Habeeb</span>
+          <span style={{ fontWeight: 700, color:'black' }}>Habeeb</span>
         </a>
       </Typography>
       <Divider />
@@ -136,7 +136,7 @@ export default function Navbar(props) {
             <ListItemText
               primary={
                 <Typography
-                  sx={{ color: activeSection === item ? "#ff014f" : "inherit" }}
+                  sx={{ color: activeSection === item ? "#ff014f" : "black" }}
                 >
                   {item.charAt(0).toUpperCase() + item.slice(1)}
                 </Typography>
@@ -161,7 +161,7 @@ export default function Navbar(props) {
         <AppBar
           elevation={isAtTop ? 0 : 4}
           sx={{
-            backgroundColor: isAtTop ? "transparent" : "white",
+            backgroundColor: isAtTop ? "#0a4d3c" : "white",
             color: isAtTop ? "white" : "black",
             transition:
               "background-color 0.9s ease-in-out, box-shadow 0.9s ease-in-out",
@@ -185,7 +185,7 @@ export default function Navbar(props) {
                     width: "50px",
                   }}
                 />
-                <span style={{ fontWeight: 700 }}>Habeeb</span>
+                <span style={{ fontWeight: 700, color:isAtTop ? 'white': 'black' }}>Habeeb</span>
               </a>
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
@@ -193,7 +193,7 @@ export default function Navbar(props) {
                 <Button
                   key={index}
                   sx={{
-                    color: activeSection === item ? "#ff014f" : "inherit",
+                    color: activeSection === item ? "#ff014f" : isAtTop ? 'white' : 'black',
                     "&:hover": {
                       color: "#ff014f", // Change background color on hover
                       boxShadow: " #ff014f", // Add shadow effect on hover
@@ -216,6 +216,7 @@ export default function Navbar(props) {
                 display: "flex",
                 gap: "5px",
                 alignItems: "center",
+                color:'black !important'
               }}
             >
               <IconButton
@@ -224,14 +225,14 @@ export default function Navbar(props) {
                 edge="start"
                 fontSize="large"
                 onClick={handleDrawerToggle}
-                sx={{ display: { sm: "block", md: "none" } }}
+                sx={{ color:"inherit !important",display: { sm: "block", md: "none" } }}
               >
-                <MenuIcon htmlColor="inherit" />
+                <MenuIcon htmlColor="inherit" sx={{fill:isAtTop ? 'white' : 'black'}}/>
               </IconButton>
               {/* <a href=''></a><Facebook />
               <a href=''></a><Instagram /> */}
-              <a href='https://www.linkedin.com/in/habeeb-akanni-874434101/'><LinkedIn /></a>
-              <a href='https://github.com/akannih'><GitHub /></a>
+              <a href='https://www.linkedin.com/in/habeeb-akanni-874434101/'><LinkedIn sx={{fill:isAtTop ? 'white' : 'black'}} /></a>
+              <a href='https://github.com/akannih' style={{color:'inherit'}}><GitHub  sx={{fill:isAtTop ? 'white' : 'black'}}/></a>
             </Box>
           </Toolbar>
         </AppBar>

@@ -8,67 +8,82 @@ export default function Slide() {
     <div className="slideContainer">
       <div className="slideWrapper">
         <div className="slideLeft">
-          <Paper elevation={2} sx={{ padding: "30px", borderRadius: "5px" }}>
+          <Paper
+            elevation={0}
+            sx={{
+              padding:{ xs:'0', sm: '0',md:"30px"},
+              backgroundColor: "inherit",
+              borderRadius: "5px",
+            }}
+          >
             <Stack
               direction={"column"}
               spacing={3}
               sx={{ color: "white", zIndex: 2 }}
             >
-              <h6 className="slideIntro" style={{color:'#ff014f'}}>Welcome</h6>
-              <h6 className="slideNam">Hi, <span style={{color:'#ff014f'}}>I'm </span>HABEEB TEMITOPE AKANNI</h6>
-              <h3 className="slideName">
-                <Typewriter
-                  words={[" a Data Scientist", " a Data Analyst"]}
-                  loop={true}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={100}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
-                />
-              </h3>
+              <h6 className="slideIntro">Welcome</h6>
+              <h6 className="slideNam">
+                Hi, <span>I'm </span>HABEEB AKANNI
+              </h6>
+              <h3 className="slideName">A Data Scientist</h3>
               <span className="slideLoc" style={{ textAlign: "left" }}>
-                Based in London, <span style={{color:'#ff014f'}}>United Kingdom</span>
+                Based in London,{" "}
+                <span >United Kingdom</span>
               </span>
               <span
                 className="slideLoc"
                 style={{ textAlign: "justify", fontSize: "15px" }}
               >
-                Detail-oriented and results-driven Data Analyst and Scientist with a strong
-                foundation in statistical analysis, data visualization, and
-                reporting. Skilled at performing data cleaning, creating
-                insightful visualizations, and providing actionable
-                recommendations to improve decision making and drive business
-                outcomes
+                Detail-oriented and results-driven Data Analyst and Scientist
+                with a strong foundation in statistical analysis, data
+                visualization, and reporting. Skilled at performing data
+                cleaning, creating insightful visualizations, and providing
+                actionable recommendations to improve decision making and drive
+                business outcomes
               </span>
             </Stack>
           </Paper>
           <Paper
-            elevation={2}
+            elevation={0}
             sx={{
-              padding: "30px",
+              padding:{ xs:'0', sm: '0',md:"30px"},
               borderRadius: "5px",
               display: "flex",
               flexDirection: "column",
               gap: "20px",
+              backgroundColor: "inherit",
             }}
           >
-            <span>Download my <b style={{color:'#ff014f'}}>curriculum vitae:</b></span>
+            <span>
+              Download my <b >curriculum vitae:</b>
+            </span>
 
             <Button
               variant="outlined"
-              sx={{ color: "inherit", borderColor: "#ff014f", width: "200px" }}
+              sx={{ color: "inherit", borderColor: "white", width: "200px" }}
             >
-               <a href="/Images/DataScientist_CV.pdf" style={{}} download="Akanni_Habeeb_CV.pdf">Download CV</a>
+              <a
+                href="/Images/DataScientist_CV.pdf"
+                style={{}}
+                download="Akanni_Habeeb_CV.pdf"
+              >
+                Download CV
+              </a>
             </Button>
           </Paper>
         </div>
         <div className="slideRight">
-          <Paper className="sidePap" elevation={2} sx={{height:'calc(100% - 55px)',overflow:'hidden', padding: "10px", borderRadius: "5px" }}>
-            <img
-              src="/Images/intro-bg.jpg"
-              alt=""
-              />
+          <Paper
+            className="sidePap"
+            elevation={2}
+            sx={{
+              height: "calc(100% - 55px)",
+              overflow: "hidden",
+              padding: {xs:0,sm:'0',md:"10px"},
+              borderRadius: "5px",
+            }}
+          >
+            <img src="/Images/intro-bg.jpg" alt="" />
           </Paper>
         </div>
       </div>

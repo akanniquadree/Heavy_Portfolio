@@ -21,7 +21,7 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: "100vw",
   height: "100vh",
-  bgcolor: "rgba(0,0,0 ,0.6)",
+  bgcolor: "rgba(50, 50, 50, 0.6)",
   boxShadow: 24,
   p: 1,
   display: "flex",
@@ -60,7 +60,7 @@ export default function Work() {
         </div>
         <div className="workStack">
           {workData.map((item, index) => (
-            <Paper
+            <Paper sx={{backgroundColor:'inherit'}}
               onClick={() => handleOpen(index)}
               className="workLists"
               elevation={2}
@@ -82,13 +82,13 @@ export default function Work() {
             htmlColor="white"
             size="large"
             onClick={handleClose}
-            style={{ zIndex: 3, position: "absolute", top: 10, right: 10 }}
+            style={{ zIndex: 3, position: "absolute", top: 10,color:'white', right: 10 }}
           >
             <CloseIcon htmlColor="white" />
           </IconButton>
           <div
             style={{
-              backgroundColor: "white",
+              backgroundColor: "black",
               width: "80%",
               height: "90%",
               padding: "20px",
@@ -132,7 +132,7 @@ export default function Work() {
                       <p> {workData[currentIndex].client}</p>
                     </Box>
                   </Stack>
-                  <Divider sx={{ marginBottom: "7px" }} />
+                  <Divider sx={{backgroundColor:'white', marginBottom: "7px" }} />
                   <Stack
                     direction="row"
                     spacing={2}
@@ -149,7 +149,7 @@ export default function Work() {
                       <p> {workData[currentIndex].org}</p>
                     </Box>
                   </Stack>
-                  <Divider sx={{ marginBottom: "7px" }} />
+                  <Divider sx={{backgroundColor:'white', marginBottom: "7px" }} />
 
                   <Stack
                     direction="row"
@@ -167,7 +167,7 @@ export default function Work() {
                       <p> {workData[currentIndex].tech}</p>
                     </Box>
                   </Stack>
-                  <Divider sx={{ marginBottom: "7px" }} />
+                  <Divider sx={{backgroundColor:'white', marginBottom: "7px" }} />
 
                   <Stack
                     direction="row"
@@ -185,7 +185,7 @@ export default function Work() {
                       <p>Full Stack</p>
                     </Box>
                   </Stack>
-                  <Divider sx={{ marginBottom: "7px" }} />
+                  <Divider sx={{backgroundColor:'white', marginBottom: "7px" }} />
 
                   <Stack
                     direction="row"
@@ -203,18 +203,18 @@ export default function Work() {
                       <p> {workData[currentIndex].date}</p>
                     </Box>
                   </Stack>
-                  <Divider sx={{ marginBottom: "7px" }} />
+                  <Divider sx={{backgroundColor:'white', marginBottom: "7px" }} />
 
                  
 
                   <Stack
                     direction="row"
                     spacing={2}
-                    sx={{ marginTop: "2px", alignItems: "center" }}
+                    sx={{ marginTop: "7px", alignItems: "center" }}
                   >
                     <GitHub />
                     <a href= {workData[currentIndex].code}>
-                    <Button sx={{ color: "#ff014f" }}>View Source code</Button></a>
+                    <Button sx={{ color: "#ff014f", height:'50px' }}>View Source code</Button></a>
                   </Stack>
                 </div>
               </div>
@@ -254,7 +254,7 @@ const workData = [
     name: "AI for Marketing Campaign Optimization",
     code: "https://github.com/akannih/A.I.Sales_Agent",
     client: "Personal Project",
-    org: "arketing Firm",
+    org: "Marketing Firm",
     tech: "Python",
     date: "2024.",
     type: "Deployed the model on AWS for real-time predictions.",
@@ -274,8 +274,8 @@ const workData = [
     name: "Cancer Malignancy Prediction",
     code: "https://github.com/akannih/Machine_Learning_Projects/blob/main/Cancer%20prediction.ipynb",
     client: "Personal Project",
-    org: "Marchine Learning",
-    tech: "Python, pandas, seaborn, matplot and numpy",
+    org: "Machine Learning",
+    tech: "Python",
     date: "2024.",
     type: "Improved the model’s performance to 98% by using XGBoost for model optimization",
     desc: "Built a Decision Tree Classifier model that predicted benign vs malignant cancers with 90% accuracy",
@@ -285,7 +285,7 @@ const workData = [
     code: "https://github.com/akannih/Machine_Learning_Projects/blob/main/Stock_Price_Prediction.ipynb",
     client: "Personal Project",
     org: "Machine Learning",
-    tech: "Python, XGBoost, Seaborn, Pandas ",
+    tech: "Python",
     date: "2024",
     type: "Machine Learning",
     desc: "Developed a stock price prediction model using XGBoost",
@@ -296,7 +296,7 @@ const workData = [
     code: "https://github.com/akannih/Super_Mario_Project.git",
     client: "Personal Project",
     org: "Artificial Intelligence",
-    tech: "Python and jupyter notebook ",
+    tech: "Python",
     date: "2024.",
     type: "Machine Learning",
     desc: "Implemented a Reinforcement Learning model to enable an AI to play Super Mario using Keras and the OpenAI Gym library.",

@@ -5,11 +5,11 @@ import { Box, Button, Divider, Stack } from "@mui/material";
 const desc = [
   {
     question: "Name",
-    answer: "Akanni H.T",
+    answer: "Habeeb Akanni",
   },
   {
     question: "Occupation",
-    answer: "Data Analyst",
+    answer: "Data Scientist",
   },
   {
     question: "Phone",
@@ -47,8 +47,7 @@ export default function About() {
           <div className="aboutDetail">
             <div className="aboutDetailWrap">
               <h3>
-                <span style={{ color: "#ff014f" }}>I'm </span>HABEEB TEMITOPE
-                AKANNI
+                <span >I'm </span>HABEEB AKANNI
               </h3>
               <p>
                 Detail-oriented and results-driven Data Scientist and Analyst
@@ -60,7 +59,7 @@ export default function About() {
                 performing data wrangling, and automating workflows to improve
                 decision-making processes
               </p>
-              <Divider />
+              <Divider sx={{backgroundColor:'white'}} />
               {desc.map((item, index) => (
                 <Stack
                   direction="row"
@@ -80,12 +79,18 @@ export default function About() {
                   </Box>
                 </Stack>
               ))}
-              <Divider />
+              <Divider sx={{backgroundColor:'white'}} />
               <Button
                 variant="contained"
                 sx={{ alignSelf: "center", backgroundColor: "#ff014f" }}
               >
-                <a href="/Images/DataScientist_CV.pdf" style={{}} download="Akanni_Habeeb_CV.pdf">Download CV</a>
+                <a
+                  href="/Images/DataScientist_CV.pdf"
+                  style={{}}
+                  download="Akanni_Habeeb_CV.pdf"
+                >
+                  Download CV
+                </a>
               </Button>
             </div>
           </div>
@@ -94,4 +99,3 @@ export default function About() {
     </div>
   );
 }
-

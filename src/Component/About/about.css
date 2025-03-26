@@ -1,7 +1,9 @@
 .aboutContainer{
-    margin-top: 60px;
+    
+    background: linear-gradient(to top, #0a4d3c, #7b5a44)
 }
 .aboutWrapper{
+    /* margin-top: 60px; */
     display: flex;
     flex-direction: column;
     padding: 30px;
@@ -76,7 +78,7 @@
 }
 @media (max-width: 768px) {
     .aboutContainer{
-        margin-top: 10px;
+        /* margin-top: 10px; */
     }
     .aboutTitleParaH {
         font-size: 2rem; /* Smaller font size for smaller screens */
@@ -94,7 +96,7 @@
 
 @media (max-width: 480px) {
     .aboutContainer{
-        margin-top: 10px;
+        /* margin-top: 10px; */
     }
     .aboutTitleParaH {
         font-size: 1.13rem; /* Further adjust for mobile devices */

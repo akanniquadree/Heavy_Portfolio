@@ -79,11 +79,11 @@ export default function Contact() {
                   sx={{
                     "& .MuiOutlinedInput-root": {
                       "&.Mui-focused fieldset": {
-                        borderColor: "rgba(49, 56, 80, 0.8)", // Change the outline color on focus
+                        borderColor: "rgba(237, 237, 237, 0.8)", // Change the outline color on focus
                       },
                     },
                     "& .MuiInputLabel-root.Mui-focused": {
-                      color: "rgba(49, 56, 80, 0.8)", // Change the label color on focus
+                      color: "rgba(237, 237, 237, 0.8)", // Change the label color on focus
                     },
                   }}
                 />
@@ -93,11 +93,11 @@ export default function Contact() {
                   sx={{
                     "& .MuiOutlinedInput-root": {
                       "&.Mui-focused fieldset": {
-                        borderColor: "rgba(49, 56, 80, 0.8)", // Change the outline color on focus
+                        borderColor: "rgba(237, 237, 237, 0.8)", // Change the outline color on focus
                       },
                     },
                     "& .MuiInputLabel-root.Mui-focused": {
-                      color: "rgba(49, 56, 80, 0.8)", // Change the label color on focus
+                      color: "rgba(237, 237, 237, 0.8)", // Change the label color on focus
                     },
                   }}
                 />
@@ -108,11 +108,11 @@ export default function Contact() {
                 mb: 1,
                 "& .MuiOutlinedInput-root": {
                   "&.Mui-focused fieldset": {
-                    borderColor: "rgba(49, 56, 80, 0.8)", // Change the outline color on focus
+                    borderColor: "rgba(237, 237, 237, 0.8)", // Change the outline color on focus
                   },
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
-                  color: "rgba(49, 56, 80, 0.8)", // Change the label color on focus
+                  color: "rgba(237, 237, 237, 0.8)", // Change the label color on focus
                 },
               }}
               id="filled-multiline-static"

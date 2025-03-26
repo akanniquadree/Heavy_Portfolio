@@ -1,5 +1,5 @@
 .serviceContainer{
-    margin-top: 60px;
+    background: linear-gradient(to top, #0a4d3c, #7b5a44)
 }
 .serviceWrapper{
     display: flex;

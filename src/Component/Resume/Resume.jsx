@@ -61,7 +61,7 @@ function a11yProps(index) {
   };
 }
 const CustomTabs = styled(Tabs)({
-  backgroundColor: "white", // Background for the tabs container
+  backgroundColor: "inherit", // Background for the tabs container
   padding: "5px",
   // boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
 });
@@ -77,7 +77,7 @@ const CustomTab = styled(Tab)({
   transition: "0.3s",
   "&.Mui-selected": {
     color: "#ff014f",
-    backgroundColor: "white", // Background for active tab
+    backgroundColor: "inherit", // Background for active tab
   },
   "&:hover": {
     backgroundColor: "#ff014f", // Hover effect
@@ -129,7 +129,7 @@ export default function Resume() {
               <div className="resumeDetailItems">
                 <div className="resumeDetailLists">
                   {degree.map((item, index) => (
-                    <Paper className="resumeDetailList" key={index}>
+                    <Paper elevation={0} sx={{backgroundColor:'inherit'}} className="resumeDetailList" key={index}>
                       <div className="resumeDate">
                         <p>{item.date}</p>
                       </div>
@@ -144,7 +144,7 @@ export default function Resume() {
               <div className="resumeDetailItems">
                 <div className="resumeDetailLists">
                   {Courses.map((item, index) => (
-                    <Paper className="resumeDetailList" key={index}>
+                    <Paper elevation={0} sx={{backgroundColor:'inherit'}} className="resumeDetailList" key={index}>
                       <div className="resumeDate">
                         <p>{item.date}</p>
                       </div>
@@ -189,7 +189,7 @@ export default function Resume() {
               <div className="resumeDetailItems">
                 <div className="resumeDetailLists">
                   {Experience.map((item, index) => (
-                    <Paper className="resumeDetailList" key={index}>
+                    <Paper elevation={0} sx={{backgroundColor:'inherit'}} className="resumeDetailList" key={index}>
                       <div className="resumeDate">
                         <p>{item.date}</p>
                       </div>
@@ -296,7 +296,7 @@ const Skills = [
     garde: 90,
   },
   {
-    name: "SQL Database",
+    name: "MySQL Database",
     garde: 75,
   },
   {

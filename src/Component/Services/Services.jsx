@@ -51,7 +51,7 @@ export default function Services() {
         </div>
         <div className="ServiceLists">
           {service.map((item, index) => (
-            <Paper className="ServiceListItem" key={index}>
+            <Paper elevation={2} sx={{backgroundColor:"inherit"}} className="ServiceListItem" key={index}>
               <Stack
                 direction={{sm:'column',md:"row"}}
                 spacing={{sm:2,md:3}}

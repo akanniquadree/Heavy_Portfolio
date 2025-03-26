@@ -1,5 +1,5 @@
 .resumeContainer{
-    margin-top: 60px;
+   background: linear-gradient(to bottom, #0a4d3c, #7b5a44)
 }
 .resumeWrapper{
     display: flex;

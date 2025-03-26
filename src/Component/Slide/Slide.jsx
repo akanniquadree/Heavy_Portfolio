@@ -59,7 +59,7 @@ export default function Slide() {
               variant="outlined"
               sx={{ color: "inherit", borderColor: "#ff014f", width: "200px" }}
             >
-              Download CV
+               <a href="/Images/DataScientist_CV.pdf" style={{}} download="Akanni_Habeeb_CV.pdf">Download CV</a>
             </Button>
           </Paper>
         </div>

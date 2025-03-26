@@ -1,7 +1,15 @@
 import React from "react";
 import "./contact.css";
 import { Box, Button, Stack, TextField } from "@mui/material";
-import { Email, Facebook, GitHub, Instagram, LinkedIn, Phone, WhatsApp } from "@mui/icons-material";
+import {
+  Email,
+  Facebook,
+  GitHub,
+  Instagram,
+  LinkedIn,
+  Phone,
+  WhatsApp,
+} from "@mui/icons-material";
 
 export default function Contact() {
   return (
@@ -30,12 +38,18 @@ export default function Contact() {
                 </div>
               </Stack>
             ))}
-            <h4 className="contactSend" style={{margin:'15px 0'}}>Follow Me</h4>
-            <Box sx={{display:'flex', gap:'10px'}}>
-              <Facebook />
-              <Instagram />
-              <LinkedIn />
-              <GitHub />
+            <h4 className="contactSend" style={{ margin: "15px 0" }}>
+              Follow Me
+            </h4>
+            <Box sx={{ display: "flex", gap: "10px" }}>
+              {/* <Facebook />
+              <Instagram /> */}
+              <a href="https://www.linkedin.com/in/habeeb-akanni-874434101/">
+                <LinkedIn />
+              </a>
+              <a href="https://github.com/akannih">
+                <GitHub />
+              </a>
             </Box>
           </div>
           <div className="contactRight">

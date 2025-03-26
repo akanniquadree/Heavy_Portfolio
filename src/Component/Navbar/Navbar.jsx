@@ -228,10 +228,10 @@ export default function Navbar(props) {
               >
                 <MenuIcon htmlColor="inherit" />
               </IconButton>
-              <Facebook />
-              <Instagram />
-              <LinkedIn />
-              <GitHub />
+              {/* <a href=''></a><Facebook />
+              <a href=''></a><Instagram /> */}
+              <a href='https://www.linkedin.com/in/habeeb-akanni-874434101/'><LinkedIn /></a>
+              <a href='https://github.com/akannih'><GitHub /></a>
             </Box>
           </Toolbar>
         </AppBar>

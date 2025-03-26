@@ -85,7 +85,7 @@ export default function About() {
                 variant="contained"
                 sx={{ alignSelf: "center", backgroundColor: "#ff014f" }}
               >
-                Download CV
+                <a href="/Images/DataScientist_CV.pdf" style={{}} download="Akanni_Habeeb_CV.pdf">Download CV</a>
               </Button>
             </div>
           </div>
@@ -94,3 +94,4 @@ export default function About() {
     </div>
   );
 }
+
